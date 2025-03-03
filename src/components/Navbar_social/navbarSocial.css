@@ -1,0 +1,35 @@
+@keyframes shaking {
+  0% {
+    transform: rotate(0grad);
+  }
+  25% {
+    transform: rotate(-10grad);
+  }
+  50% {
+    transform: rotate(10grad);
+  }
+  75% {
+    transform: rotate(-10grad);
+  }
+  100% {
+    transform: rotate(0grad);
+  }
+}
+
+#navbar_social {
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.15);
+  border-radius: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  height: auto;
+  width: 500px;
+}
+
+#navbar_social > ul {
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+}

@@ -1,0 +1,20 @@
+@font-face {
+  font-family: "lilitaone";
+  src: url("/assets/fonts/lilitaone-regular-webfont\ \(2\).ttf");
+}
+
+:root {
+  --color-background: #121212;
+  --color-text: #f7f7f7;
+  --color-accent: #f3ad20;
+  --white-details: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "lilitaone", sans-serif;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}

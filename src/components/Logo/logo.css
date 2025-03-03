@@ -1,0 +1,20 @@
+#logo {
+  align-items: center;
+  border: 2px solid red;
+  display: flex;
+  gap: 1em;
+  height: auto;
+  justify-content: center;
+  width: auto;
+}
+
+#logo > img {
+  filter: drop-shadow(1px 1px 1px black);
+  height: auto;
+  width: 50px;
+}
+
+#logo > h1 {
+  color: var(--color-accent);
+  filter: drop-shadow(1px 1px 1px black);
+}
