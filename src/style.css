@@ -18,3 +18,19 @@
   padding: 0;
   text-decoration: none;
 }
+
+body {
+  background: rgb(17, 28, 85);
+}
+
+main {
+  border: 2px solid blue;
+  width: 100%;
+  min-height: 90vh;
+}
+
+footer {
+  border: 2px solid yellowgreen;
+  width: 100%;
+  min-height: 100px;
+}

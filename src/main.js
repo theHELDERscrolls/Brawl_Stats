@@ -1,7 +1,8 @@
+import { header } from "./components/Header/header";
 import "./style.css";
 
 const init = () => {
-  const header = document.querySelector("header");
-  header.innerHTML = "";
+  header();
 };
+
 init();
