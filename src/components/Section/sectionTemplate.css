@@ -1,0 +1,57 @@
+/* Add or remove ID if you add or remove section templates */
+#brawlers_info,
+#players_info {
+  align-items: center;
+  background: var(--color-section-background)
+    url("https://www.transparenttextures.com/patterns/60-lines.png");
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.home_container {
+  align-items: center;
+  background: var(--color-background);
+  border-radius: 10px;
+  border: 2px solid var(--white-details);
+  box-shadow: 15px 15px 15px var(--color-background);
+  display: flex;
+  gap: 2em;
+  height: 400px;
+  justify-content: center;
+  padding: 2em;
+  width: 60%;
+}
+
+.home_container > video {
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px var(--white-details);
+  height: auto;
+  max-width: 350px;
+}
+
+.section_info {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  height: 100%;
+  justify-content: center;
+}
+
+.section_info > h2,
+p {
+  font-weight: 100;
+}
+
+.section_info > h2 {
+  color: var(--color-accent);
+  font-size: 3em;
+  text-align: center;
+}
+
+.section_info > p {
+  color: var(--color-text);
+  font-size: 1.5em;
+}

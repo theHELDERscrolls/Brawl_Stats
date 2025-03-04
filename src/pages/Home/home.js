@@ -1,6 +1,8 @@
 import "./home.css";
 import { pageCleaner } from "../../utils/cleanPage";
 import { navbarSocial } from "../../components/Navbar_social/navbarSocial";
+import { secTempA } from "../../components/Section/Sec_temp_A/secTempA";
+import { secTempB } from "../../components/Section/Sec_template_B/secTempB";
 
 export const Home = () => {
   const main = document.querySelector("main");
@@ -12,30 +14,18 @@ export const Home = () => {
       <h3>Track, compare, and improve your gameplay in every match.</h3>
       ${navbarSocial()}      
     </section>
-
-    <section id="brawlers_info">
-      <div class="home_container">
-        <div class="section_info">
-          <h2>Know all the brawlers</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore voluptate doloribus id quas nisi, in
-            tenetur, dolore accusamus autem quam repellendus iste veritatis aliquid, quo nesciunt cum? Voluptatum,
-            laborum
-            perspiciatis.</p>
-        </div>
-        <video src="/assets/videos/BS_Banner.mp4" muted autoplay loop></video>
-      </div>
-    </section>
-
-    <section id="players_info">
-      <div class="home_container">
-        <video src="/assets/videos/BS_Banner.mp4" muted autoplay loop></video>
-        <div class="section_info">
-          <h2>Know all the brawlers</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore voluptate doloribus id quas nisi, in
-            tenetur, dolore accusamus autem quam repellendus iste veritatis aliquid, quo nesciunt cum? Voluptatum,
-            laborum
-            perspiciatis.</p>
-        </div>
-      </div>
-    </section>`;
+    
+    ${secTempA(
+      "brawlers_info",
+      "Know all the brawlers",
+      "Explore all available brawlers and discover their abilities, stats, and unique traits. Each profile includes a detailed description and a strategic guide to help you master their playstyle and make the most of their potential in battle.",
+      "/assets/videos/BS_Banner.mp4"
+    )}
+    
+    ${secTempB(
+      "/assets/videos/BS_Banner.mp4",
+      "players_info",
+      "Check your stats and compare",
+      "Check your stats by entering your player code and compare them with other users. Analyze your performance, victories, and improvements in each match to keep progressing and become a better brawler."
+    )}`;
 };
