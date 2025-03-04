@@ -29,6 +29,9 @@
   z-index: -1;
 }
 
+/* Estas son los estilos de las secciones que haremos como
+componentes en otro archivo, así que hay que cambiarlo de ubicación. */
+
 #brawlers_info {
   background: grey;
   border: 2px solid red;
