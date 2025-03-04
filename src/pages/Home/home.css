@@ -1,0 +1,30 @@
+#hero {
+  width: 100%;
+  min-height: 90vh;
+  display: flex;
+  color: var(--color-text);
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2em;
+}
+
+#hero > h2 {
+  font-size: 5em;
+  font-weight: 100;
+}
+
+#hero > h3 {
+  font-size: 2em;
+  font-weight: 100;
+}
+
+#hero > video {
+  filter: brightness(0.4);
+  height: 100vh;
+  object-fit: cover;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+}
