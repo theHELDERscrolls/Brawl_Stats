@@ -4,9 +4,9 @@
 }
 
 :root {
+  --color-accent: #f3ad20;
   --color-background: #121212;
   --color-text: #f7f7f7;
-  --color-accent: #f3ad20;
   --white-details: #ffffff;
 }
 
@@ -19,17 +19,14 @@
   text-decoration: none;
 }
 
-body {
-  background: rgb(17, 28, 85);
-}
-
 main {
-  width: 100%;
   min-height: 90vh;
+  padding-top: 10vh;
+  width: 100%;
 }
 
 footer {
   border: 2px solid yellowgreen;
-  width: 100%;
   min-height: 100px;
+  width: 100%;
 }

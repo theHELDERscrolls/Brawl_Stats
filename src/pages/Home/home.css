@@ -1,12 +1,12 @@
 #hero {
-  width: 100%;
-  min-height: 90vh;
-  display: flex;
-  color: var(--color-text);
   align-items: center;
-  justify-content: center;
+  color: var(--color-text);
+  display: flex;
   flex-direction: column;
   gap: 2em;
+  justify-content: center;
+  min-height: 90vh;
+  width: 100%;
 }
 
 #hero > h2 {
@@ -28,3 +28,24 @@
   width: 100%;
   z-index: -1;
 }
+
+#brawlers_info {
+  background: grey;
+  border: 2px solid red;
+}
+
+.home_container {
+  border: 2px solid yellowgreen;
+  display: flex;
+}
+
+.home_container > video {
+  width: 500px;
+  height: auto;
+}
+
+#players_info {
+  background: rgb(1, 1, 165);
+
+}
+
