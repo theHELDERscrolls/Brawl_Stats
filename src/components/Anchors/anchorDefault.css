@@ -1,12 +1,13 @@
 #suggest_btn {
   background: var(--white-details);
-  border: 2px solid var(--color-background);
   border-radius: 10px;
-  color: var(--color-background);
+  border: 2px solid var(--color-background);
   box-shadow: 2px 2px 0px var(--color-background);
+  color: var(--color-background);
+  height: auto;
   padding: 5px;
   width: auto;
-  height: auto;
+  z-index: 999;
 
   transition: all 0.2s ease-in-out;
 }

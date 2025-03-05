@@ -5,6 +5,7 @@
   height: auto;
   justify-content: center;
   width: auto;
+  z-index: 999;
 }
 
 #logo > img {

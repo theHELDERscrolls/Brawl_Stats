@@ -15,10 +15,3 @@ export const header = () => {
   )}
 `;
 };
-
-//  ${logo("/assets/images/BS_logo.png", "Brawl Stats logo", "Braw Stats")}
-/*   ${anchorDefault(
-    "suggest_btn",
-    "mailto:manuhelderrui@gmail.com?subject=Website suggest",
-    "Suggest"
-  )} */
