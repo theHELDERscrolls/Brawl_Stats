@@ -1,3 +1,10 @@
+@keyframes scaleInOut {
+  to {
+    transform: scale(0);
+    opacity: 0;
+  }
+}
+
 #hero {
   align-items: center;
   color: var(--color-text);
@@ -27,4 +34,10 @@
   top: 0;
   width: 100%;
   z-index: -1;
+}
+
+#hero h2, h3, #navbar_social {
+  animation: scaleInOut linear both;
+  animation-timeline: view();
+  animation-range: exit -20vh exit 0vh;
 }

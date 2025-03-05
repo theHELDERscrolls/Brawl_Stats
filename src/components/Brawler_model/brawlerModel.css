@@ -3,16 +3,15 @@
   z-index: 1;
   width: auto;
   height: 500px;
-  /*  */
-
-  /* border: 2px solid red; */
-
-  /*  */
   filter: drop-shadow(2px 2px 0px var(--white-details))
     drop-shadow(-2px -2px 0px var(--white-details))
     drop-shadow(2px -2px 0px var(--white-details))
     drop-shadow(-2px 2px 0px var(--white-details))
     drop-shadow(15px 15px 15px var(--color-background));
+
+  animation: scaleInOut linear both reverse;
+  animation-timeline: view();
+  animation-range: entry 10% cover 40%;
 }
 
 #brawlers_info .brawler_model {

@@ -11,8 +11,6 @@
   width: 100%;
 }
 
-/*! Usar animation de scroll para el navbar y de view() para el contenido */
-
 .home_container {
   align-items: center;
   background: var(--color-background);
@@ -25,6 +23,10 @@
   justify-content: center;
   padding: 2em;
   width: 60%;
+
+  animation: scaleInOut linear both reverse;
+  animation-timeline: view();
+  animation-range: entry 20% cover 40%;
 }
 
 .home_container > video {
