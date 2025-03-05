@@ -1,0 +1,27 @@
+.spray_icon {
+  filter: drop-shadow(2px 2px 0px var(--white-details))
+    drop-shadow(-2px -2px 0px var(--white-details))
+    drop-shadow(2px -2px 0px var(--white-details))
+    drop-shadow(-2px 2px 0px var(--white-details));
+  height: 250px;
+  position: absolute;
+  width: auto;
+  z-index: -1;
+}
+
+#brawlers_info .spray_icon {
+  top: -3em;
+  right: 5em;
+  rotate: 25deg;
+}
+
+#players_info .spray_icon:nth-of-type(2) {
+  top: -4em;
+  left: 25%;
+  rotate: -20deg;
+}
+
+#players_info .spray_icon:nth-of-type(4) {
+  bottom: -2em;
+  right: 10em;
+}
