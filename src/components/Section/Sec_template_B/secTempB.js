@@ -16,6 +16,9 @@ export const secTempB = (videoSrc, sectionId, title, text) => {
                 <p>${text}</p>
             </div>
         </div>
+        ${createSprayIcon(
+          "https://cdn-assets-eu.frontify.com/s3/frontify-enterprise-files-eu/eyJwYXRoIjoic3VwZXJjZWxsXC9maWxlXC9rb0pUbUh5YWJGOEN5cGRIUnM5Zy5wbmcifQ:supercell:9GPQewmV3eARNkZblxT-uzvVbRRlNPCCT1A9Zz_Qz5w?width=800"
+        )}
         ${brawlerModel("16000012")}
         ${createSprayIcon(
           "https://cdn-assets-eu.frontify.com/s3/frontify-enterprise-files-eu/eyJwYXRoIjoic3VwZXJjZWxsXC9maWxlXC9ZdWNQWEVLNUJIS3l0UHprWVFENi5wbmcifQ:supercell:jv55UBy6l3flxg46HbXvrXpEdQuxXmDROVi3syqC6eY?width=800"

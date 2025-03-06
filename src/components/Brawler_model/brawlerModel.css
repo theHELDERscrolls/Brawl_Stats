@@ -1,8 +1,8 @@
 .brawler_model {
   position: absolute;
   z-index: 1;
-  width: auto;
-  height: 500px;
+  width: 20%;
+  height: auto;
   filter: drop-shadow(2px 2px 0px var(--white-details))
     drop-shadow(-2px -2px 0px var(--white-details))
     drop-shadow(2px -2px 0px var(--white-details))
@@ -15,7 +15,7 @@
 }
 
 #brawlers_info .brawler_model {
-  top: 3em;
+  top: 8em;
   left: 2em;
 }
 
@@ -24,7 +24,19 @@
   right: 2em;
 }
 
-#players_info .brawler_model:nth-of-type(3) {
+#players_info .brawler_model:nth-of-type(4) {
   bottom: 2em;
   left: 2em;
+}
+
+@media (max-width: 967px) {
+  #players_info .brawler_model:nth-of-type(4) {
+    bottom: 10em;
+  }
+}
+
+@media (max-width: 768px) {
+  .brawler_model {
+    display: none;
+  }
 }
