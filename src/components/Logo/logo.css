@@ -1,4 +1,4 @@
-#logo {
+.logo {
   align-items: center;
   display: flex;
   gap: 1em;
@@ -8,13 +8,36 @@
   z-index: 999;
 }
 
-#logo > img {
+.logo > img {
   filter: drop-shadow(1px 1px 1px black);
   height: auto;
   width: 50px;
 }
 
-#logo > h1 {
+.logo > h1 {
   color: var(--color-accent);
   filter: drop-shadow(1px 1px 1px black);
+}
+
+#hero .logo {
+  display: none;
+}
+
+@media (max-width: 1000px) {
+  header .logo {
+    display: none;
+  }
+
+  #hero .logo {
+    display: flex;
+
+    animation: scaleInOut linear both;
+    animation-timeline: view();
+    animation-range: exit -20vh exit 0vh;
+  
+  }
+
+  #hero .logo h1 {
+    font-size: 3em;
+  }
 }

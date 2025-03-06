@@ -3,12 +3,15 @@ import { pageCleaner } from "../../utils/cleanPage";
 import { navbarSocial } from "../../components/Navbar_social/navbarSocial";
 import { secTempA } from "../../components/Section/Sec_temp_A/secTempA";
 import { secTempB } from "../../components/Section/Sec_template_B/secTempB";
+import { logo } from "../../components/Logo/logo";
 
 export const Home = () => {
   const main = document.querySelector("main");
   pageCleaner(main);
+
   main.innerHTML = `
     <section id="hero">
+      ${logo("/assets/images/BS_logo.png", "Brawl Stats logo", "Brawl Stats")}
       <video src="/assets/videos/BS_Banner.mp4" muted autoplay loop></video>
       <h2>Master the arena with your stats!</h2>  
       <h3>Track, compare, and improve your gameplay in every match.</h3>
