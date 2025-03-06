@@ -6,7 +6,7 @@ import { anchorDefault } from "../Anchors/anchorDefault";
 export const header = () => {
   const header = document.querySelector("header");
   header.innerHTML = `
-  ${logo("/assets/images/BS_logo.png", "Brawl Stats logo", "Braw Stats")}
+  ${logo("/assets/images/BS_logo.png", "Brawl Stats logo", "Brawl Stats")}
   ${navbarWeb()}
   ${anchorDefault(
     "suggest_btn",
