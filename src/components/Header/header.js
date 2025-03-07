@@ -10,7 +10,7 @@ export const header = () => {
   ${navbarWeb()}
   ${anchorDefault(
     "suggest_btn",
-    "mailto:manuhelderrui@gmail.com?subject=Website suggest",
+    "mailto:manuhelderruiz@gmail.com?subject=Website suggest",
     "Suggest"
   )}
 `;
