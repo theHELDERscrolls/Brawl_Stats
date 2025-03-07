@@ -1,9 +1,14 @@
-#sort_by_name {
+#sort_by_section, #sort_by_section article {
+  width: 100%;
+  height: auto;
+}
+
+.by_name, .article_container {
   display: grid;
   gap: 2em;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   height: auto;
-  padding: 0 10%;
+  padding: 2em 10%;
   position: relative;
   width: 100%;
   align-items: center;

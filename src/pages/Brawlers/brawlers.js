@@ -1,6 +1,6 @@
-import { characterCard } from "../../components/Brawler_card/brawlerCard.js";
 import { clickFilter } from "../../components/Filter/clickFilter.js";
 import { pageCleaner } from "../../utils/cleanPage.js";
+import { createCardsByName, getEpic, getLegendary, getMythic, getRareCommon, getSuperRare } from "../../utils/filterCardsBy.js";
 import { fetchBrawlersInfo } from "../../utils/getBrawlerInfo.js";
 import "./brawlers.css";
 
@@ -13,46 +13,119 @@ export const Brawlers = async () => {
 
   console.log(brawlerData);
 
-  /*NOTA: Tenemos que hacer un condicional y dependiendo del contenido del
-  filter diseñar la web de una forma u otra. */
   main.innerHTML = `
-  <section id="sort_by_name">
-    ${createCards()}
-  </section>
+    ${clickFilter()}
+    <section id="sort_by_section" class="by_name"></section>
   `;
-  // ${clickFilter()}
-  // changeFilter();
-};
 
-const createCards = () => {
-  // const editBrawler = brawlerData[89];
-  // return characterCard(
-  //   editBrawler.portrait,
-  //   editBrawler.name,
-  //   editBrawler.description,
-  //   editBrawler.rarityName.toLowerCase().replace(/\s+/g, "")
-  // );
-  return brawlerData
-    .map((brawler) => {
-      return characterCard(
-        brawler.portrait,
-        brawler.name,
-        brawler.description,
-        brawler.rarityName.toLowerCase().replace(/\s+/g, "")
-      );
-    })
-    .join("");
-};
+  const sectionToChange = document.querySelector("#sort_by_section");
+  const sortByFilter = document.querySelector("#sort_by");
 
-const changeFilter = () => {
-  const sortBy = document.querySelector("#sort_by");
-  sortBy.addEventListener("click", () => {
-    if (sortBy.textContent === "Name") {
-      sortBy.textContent = "Rarity";
-    } else if (sortBy.textContent === "Rarity") {
-      sortBy.textContent = "Class";
-    } else if (sortBy.textContent === "Class") {
-      sortBy.textContent = "Name";
+  updateUI(sortByFilter.textContent, sectionToChange);
+
+  sortByFilter.addEventListener("click", () => {
+    if (sortByFilter.textContent === "Name") {
+      sortByFilter.textContent = "Rarity";
+    } else if (sortByFilter.textContent === "Rarity") {
+      sortByFilter.textContent = "Class";
+    } else if (sortByFilter.textContent === "Class") {
+      sortByFilter.textContent = "Name";
     }
+
+    updateUI(sortByFilter.textContent, sectionToChange);
   });
 };
+
+const updateUI = (filter, section) => {
+  section.classList.remove("by_name", "by_rarity", "by_class");
+
+  switch (filter) {
+    case "Name":
+      section.classList.add("by_name");
+      section.innerHTML = `${createCardsByName(brawlerData)}`;
+      break;
+    case "Rarity":
+      section.classList.add("by_rarity");
+      section.innerHTML = `
+      <article>
+        <h2 href="#legendary">Legendary</h2>
+        <div class="article_container">
+          ${getLegendary(brawlerData)}
+        </div>
+      </article>
+
+      <article>
+        <h2 href="#mythic">Mythic</h2>
+        <div class="article_container">
+          ${getMythic(brawlerData)}
+        </div>
+      </article>
+      
+      <article>
+        <h2 href="#epic">Epic</h2>
+        <div class="article_container">
+          ${getEpic(brawlerData)}
+        </div>
+      </article>
+      
+      <article>
+        <h2 href="#superrare">Super Rare</h2>
+        <div class="article_container">
+          ${getSuperRare(brawlerData)}
+        </div>
+      </article>
+      
+      <article>
+        <h2 href="#rare">Rare</h2>
+        <div class="article_container">
+          ${getRareCommon(brawlerData)}
+        </div>
+      </article>`;
+      break;
+    case "Class":
+      section.classList.add("by_class");
+      section.innerHTML = ``;
+      break;
+  }
+};
+
+/*      sectionToChange.innerHTML=`
+      <article>
+        <h2 href="#tanks">TANKS</h2>
+        <div class="article_container"></div>
+      </article>
+
+      <article>
+        <h2 href="#assassins">ASSASSINS</h2>
+        <div class="article_container"></div>
+      </article>
+      
+      <article>
+        <h2 href="#support">SUPPORT</h2>
+        <div class="article_container"></div>
+      </article>
+      
+      <article>
+        <h2 href="#ontrollers">CONTROLLERS</h2>
+        <div class="article_container"></div>
+      </article>
+      
+      <article>
+        <h2 href="#damage_dealer">DAMAGE DEALERS</h2>
+        <div class="article_container"></div>
+      </article>
+      
+      <article>
+        <h2 href="#marksmen">MARKSMEN</h2>
+        <div class="article_container"></div>
+      </article>
+      
+      <article>
+        <h2 href="#artillery">ARTILLERY</h2>
+        <div class="article_container"></div>
+      </article>
+      
+      <article>
+        <h2 href="#unknown">UNKNOWN</h2>
+        <div class="article_container"></div>
+      </article>`; */
