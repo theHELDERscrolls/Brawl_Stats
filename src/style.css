@@ -20,6 +20,11 @@
   text-decoration: none;
 }
 
+body {
+  background: var(--color-section-background)
+  url("https://www.transparenttextures.com/patterns/60-lines.png");
+}
+
 main {
   min-height: 90vh;
   padding-top: 10vh;

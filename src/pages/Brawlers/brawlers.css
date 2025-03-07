@@ -1,0 +1,11 @@
+#sort_by_name {
+  display: grid;
+  gap: 2em;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  height: auto;
+  padding: 0 10%;
+  position: relative;
+  width: 100%;
+  align-items: center;
+  justify-items: center;
+}
