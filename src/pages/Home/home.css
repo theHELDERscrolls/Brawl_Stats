@@ -60,14 +60,6 @@ h3,
   h3 {
     padding: 0 0.5em;
   }
-
-  #hero h2,
-  h3,
-  #navbar_social {
-    animation: scaleInOut linear both;
-    animation-timeline: view();
-    animation-range: exit -10vh exit 0vh;
-  }
 }
 
 @media (max-width: 664px) {
