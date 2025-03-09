@@ -1,6 +1,14 @@
+import { createDivider } from "../../components/Divider/divider.js";
 import { clickFilter } from "../../components/Filter/clickFilter.js";
 import { pageCleaner } from "../../utils/cleanPage.js";
-import { createCardsByName, getEpic, getLegendary, getMythic, getRareCommon, getSuperRare } from "../../utils/filterCardsBy.js";
+import {
+  createCardsByName,
+  getEpic,
+  getLegendary,
+  getMythic,
+  getRareCommon,
+  getSuperRare,
+} from "../../utils/filterCardsBy.js";
 import { fetchBrawlersInfo } from "../../utils/getBrawlerInfo.js";
 import "./brawlers.css";
 
@@ -48,35 +56,35 @@ const updateUI = (filter, section) => {
       section.classList.add("by_rarity");
       section.innerHTML = `
       <article>
-        <h2 href="#legendary">Legendary</h2>
+        ${createDivider("rarity", "", "", "legendary", "Legendary")}
         <div class="article_container">
           ${getLegendary(brawlerData)}
         </div>
       </article>
 
       <article>
-        <h2 href="#mythic">Mythic</h2>
+        ${createDivider("rarity", "", "", "mythic", "Mythic")}
         <div class="article_container">
           ${getMythic(brawlerData)}
         </div>
       </article>
       
       <article>
-        <h2 href="#epic">Epic</h2>
+        ${createDivider("rarity", "", "", "epic", "Epic")}
         <div class="article_container">
           ${getEpic(brawlerData)}
         </div>
       </article>
       
       <article>
-        <h2 href="#superrare">Super Rare</h2>
+        ${createDivider("rarity", "", "", "superrare", "Super Rare")}
         <div class="article_container">
           ${getSuperRare(brawlerData)}
         </div>
       </article>
       
       <article>
-        <h2 href="#rare">Rare</h2>
+        ${createDivider("rarity", "", "", "rare", "Rare")}
         <div class="article_container">
           ${getRareCommon(brawlerData)}
         </div>

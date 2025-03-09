@@ -24,11 +24,3 @@
   align-items: center;
   justify-content: center;
 }
-
-#sort_by_section article > h2 {
-  border: 2px solid red;
-  font-weight: 100;
-  width: 80%;
-  height: auto;
-  color: var(--color-text);
-}
