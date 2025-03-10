@@ -1,26 +1,26 @@
 #sort_by_section,
 #sort_by_section article {
-  width: 100%;
   height: auto;
+  width: 100%;
 }
 
 .by_name,
 .article_container {
+  align-items: center;
   display: grid;
   gap: 2em;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   height: auto;
+  justify-items: center;
   padding: 2em 10%;
   position: relative;
   width: 100%;
-  align-items: center;
-  justify-items: center;
 }
 
 #sort_by_section article {
-  border: 2px solid yellow;
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
+  margin-bottom: 2em;
 }

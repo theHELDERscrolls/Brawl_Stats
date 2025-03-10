@@ -28,14 +28,13 @@
   border: 2px solid var(--white-details);
   display: flex;
   flex-direction: column;
-  height: 310px;
+  min-height: 310px;
   width: 350px;
   position: relative;
 }
 
 .character_description {
   color: var(--color-text);
-  font-weight: 100;
   letter-spacing: 1px;
   min-height: 125px;
   padding: 1em;
@@ -65,7 +64,6 @@
   bottom: 5px;
   box-shadow: 2px 2px 0px var(--color-background);
   font-size: 1.1em;
-  font-weight: 100;
   padding: 5px 10px;
   position: absolute;
   right: 5px;

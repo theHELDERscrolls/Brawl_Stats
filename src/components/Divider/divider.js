@@ -1,6 +1,7 @@
-import "./divider.css";
+import "./rarity_divider.css";
+import "./class_divider.css"
 
-export const createDivider = (classType, imgSrc, imgAlt, h2Href, h2Content) => {
+export const CreateDivider = (classType, imgSrc, imgAlt, h2Href, h2Content) => {
   const imgSrcAttr =
     imgSrc && imgAlt ? `<img src="${imgSrc}" alt="${imgAlt}"/>` : "";
   return `
