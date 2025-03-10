@@ -1,3 +1,12 @@
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 #sort_by_section,
 #sort_by_section article {
   height: auto;
@@ -15,6 +24,8 @@
   padding: 2em 10%;
   position: relative;
   width: 100%;
+
+  animation: fadeIn 0.5s linear both;
 }
 
 #sort_by_section article {
