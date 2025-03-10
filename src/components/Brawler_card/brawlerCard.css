@@ -183,3 +183,9 @@
 .common:hover::after {
   opacity: 1;
 }
+
+@media (max-width: 426px) {
+  .character_card {
+    max-width: 300px;
+  }
+}
