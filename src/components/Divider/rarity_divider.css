@@ -13,6 +13,10 @@
   text-align: center;
 }
 
+.rarity_divider a {
+  cursor: default;
+}
+
 .rarity_divider div {
   background: var(--color-text);
   border-radius: 50px;
