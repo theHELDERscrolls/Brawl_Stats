@@ -1,5 +1,6 @@
 import { CategoryArticle } from "../../components/Brawler_category/brawlerCategory.js";
 import { clickFilter } from "../../components/Filter/clickFilter.js";
+import { characterDetailGenerator } from "../../utils/characterDetails.js";
 import { pageCleaner } from "../../utils/cleanPage.js";
 import {
   createCardsByName,
@@ -191,4 +192,8 @@ const updateUI = (filter, section) => {
       ${unknownArticle}`;
       break;
   }
+
+  /* Character details generator */
+  const characterCards = document.querySelectorAll(".character_card");
+  characterDetailGenerator(characterCards);
 };

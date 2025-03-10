@@ -8,7 +8,8 @@ export const createCardsByName = (array) => {
         e.portrait,
         e.name,
         e.description,
-        e.rarityName.toLowerCase().replace(/\s+/g, "")
+        e.rarityName.toLowerCase().replace(/\s+/g, ""),
+        e.id
       );
     })
     .join("");
@@ -25,7 +26,8 @@ export const getLegendary = (array) => {
         e.portrait,
         e.name,
         e.description,
-        e.rarityName.toLowerCase().replace(/\s+/g, "")
+        e.rarityName.toLowerCase().replace(/\s+/g, ""),
+        e.id
       );
     })
     .join("");
@@ -40,7 +42,8 @@ export const getMythic = (array) => {
         e.portrait,
         e.name,
         e.description,
-        e.rarityName.toLowerCase().replace(/\s+/g, "")
+        e.rarityName.toLowerCase().replace(/\s+/g, ""),
+        e.id
       );
     })
     .join("");
@@ -54,7 +57,8 @@ export const getEpic = (array) => {
         e.portrait,
         e.name,
         e.description,
-        e.rarityName.toLowerCase().replace(/\s+/g, "")
+        e.rarityName.toLowerCase().replace(/\s+/g, ""),
+        e.id
       );
     })
     .join("");
@@ -71,7 +75,8 @@ export const getSuperRare = (array) => {
         e.portrait,
         e.name,
         e.description,
-        e.rarityName.toLowerCase().replace(/\s+/g, "")
+        e.rarityName.toLowerCase().replace(/\s+/g, ""),
+        e.id
       );
     })
     .join("");
@@ -89,7 +94,8 @@ export const getRareCommon = (array) => {
         e.portrait,
         e.name,
         e.description,
-        e.rarityName.toLowerCase().replace(/\s+/g, "")
+        e.rarityName.toLowerCase().replace(/\s+/g, ""),
+        e.id
       );
     })
     .join("");
@@ -106,7 +112,8 @@ export const getTanks = (array) => {
         e.portrait,
         e.name,
         e.description,
-        e.rarityName.toLowerCase().replace(/\s+/g, "")
+        e.rarityName.toLowerCase().replace(/\s+/g, ""),
+        e.id
       );
     })
     .join("");
@@ -121,7 +128,8 @@ export const getAssassins = (array) => {
         e.portrait,
         e.name,
         e.description,
-        e.rarityName.toLowerCase().replace(/\s+/g, "")
+        e.rarityName.toLowerCase().replace(/\s+/g, ""),
+        e.id
       );
     })
     .join("");
@@ -136,7 +144,8 @@ export const getSupport = (array) => {
         e.portrait,
         e.name,
         e.description,
-        e.rarityName.toLowerCase().replace(/\s+/g, "")
+        e.rarityName.toLowerCase().replace(/\s+/g, ""),
+        e.id
       );
     })
     .join("");
@@ -151,7 +160,8 @@ export const getController = (array) => {
         e.portrait,
         e.name,
         e.description,
-        e.rarityName.toLowerCase().replace(/\s+/g, "")
+        e.rarityName.toLowerCase().replace(/\s+/g, ""),
+        e.id
       );
     })
     .join("");
@@ -166,7 +176,8 @@ export const getDamageDealer = (array) => {
         e.portrait,
         e.name,
         e.description,
-        e.rarityName.toLowerCase().replace(/\s+/g, "")
+        e.rarityName.toLowerCase().replace(/\s+/g, ""),
+        e.id
       );
     })
     .join("");
@@ -181,7 +192,8 @@ export const getMarksman = (array) => {
         e.portrait,
         e.name,
         e.description,
-        e.rarityName.toLowerCase().replace(/\s+/g, "")
+        e.rarityName.toLowerCase().replace(/\s+/g, ""),
+        e.id
       );
     })
     .join("");
@@ -196,7 +208,8 @@ export const getArtillery = (array) => {
         e.portrait,
         e.name,
         e.description,
-        e.rarityName.toLowerCase().replace(/\s+/g, "")
+        e.rarityName.toLowerCase().replace(/\s+/g, ""),
+        e.id
       );
     })
     .join("");
@@ -211,7 +224,8 @@ export const getUnknown = (array) => {
         e.portrait,
         e.name,
         e.description,
-        e.rarityName.toLowerCase().replace(/\s+/g, "")
+        e.rarityName.toLowerCase().replace(/\s+/g, ""),
+        e.id
       );
     })
     .join("");
