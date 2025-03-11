@@ -33,11 +33,11 @@ export const characterCard = (
   <div class="detailed_card_overlay" data-id=${brawlerId} style="display: none;">
     <div class="detailed_card">  
       <img class="close_btn" src="/assets/icons/x.svg" alt="close button">
-      <header>
+      <header class="header_detailed_card">
         <h2>${name}</h2>
         <img class="model_img" src="${model}" alt="${name} model">
       </header>
-      <section>
+      <section class="section_detailed_card">
         <h3 class="power_name">NOMBRE DEL PODER</h3>
         <div class="power_icons">
           ${
