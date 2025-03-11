@@ -56,7 +56,7 @@ h3 {
 }
 
 #hero h2,
-h3,
+#hero h3,
 #navbar_social {
   animation: scaleInOut linear both;
   animation-timeline: view();

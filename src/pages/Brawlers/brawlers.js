@@ -1,7 +1,6 @@
 import { CategoryArticle } from "../../components/Brawler_category/brawlerCategory.js";
-import { clickFilter } from "../../components/Filter/clickFilter.js";
 import { characterDetailGenerator } from "../../utils/characterDetails.js";
-import { pageCleaner } from "../../utils/cleanPage.js";
+import { clickFilter } from "../../components/Filter/clickFilter.js";
 import {
   createCardsByName,
   getArtillery,
@@ -19,6 +18,7 @@ import {
   getUnknown,
 } from "../../utils/filterCardsBy.js";
 import { fetchBrawlersInfo } from "../../utils/getBrawlerInfo.js";
+import { pageCleaner } from "../../utils/cleanPage.js";
 
 import "./brawlers.css";
 

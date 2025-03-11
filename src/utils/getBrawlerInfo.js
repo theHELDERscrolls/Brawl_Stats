@@ -18,14 +18,12 @@ export const fetchBrawlersInfo = async () => {
 
       //1º star power
       first_StarPower: brawler.starPowers[0]?.name || null,
-      first_StarPowerDescription:
-        brawler.starPowers[0]?.descriptionHtml || null,
+      first_StarPowerDescription: brawler.starPowers[0]?.descriptionHtml || null,
       first_StarPowerImage: brawler.starPowers[0]?.imageUrl || null,
 
       //2º star power
       second_StarPower: brawler.starPowers[1]?.name || null,
-      second_StarPowerDescription:
-        brawler.starPowers[1]?.descriptionHtml || null,
+      second_StarPowerDescription: brawler.starPowers[1]?.descriptionHtml || null,
       second_StarPowerImage: brawler.starPowers[1]?.imageUrl || null,
 
       // 1º gadget
@@ -45,4 +43,4 @@ export const fetchBrawlersInfo = async () => {
   }
 };
 
-//fetchBrawlersInfo().then((data) => console.log(data));
+fetchBrawlersInfo().then((data) => console.log(data));
