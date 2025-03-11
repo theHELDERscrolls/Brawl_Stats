@@ -38,7 +38,7 @@ export const characterCard = (
         <img class="model_img" src="${model}" alt="${name} model">
       </header>
       <section class="section_detailed_card">
-        <h3 class="power_name">NOMBRE DEL PODER</h3>
+        <h3 class="power_name">${firstStarPowerName}</h3>
         <div class="power_icons">
           ${
             firstStarPowerName
@@ -61,7 +61,7 @@ export const characterCard = (
               : ""
           }
         </div>
-        <p class="power_desc">Aquí metería un lorem ipsum de esos, pero es que no puedo porque lo estoy metiendo por DOM entonces me toca inventar alguna cosa para rellenar espacio y simular que es algún tipo de texto.</p>
+        <p class="power_desc">${firstStarPowerDesc}</p>
       </section>
     </div>
   </div>`;
