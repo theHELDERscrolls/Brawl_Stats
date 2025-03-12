@@ -8,6 +8,7 @@
 
   animation: fadeIn 1s linear both;
 }
+
 .class_divider a {
   color: var(--color-text);
   font-size: 2em;

@@ -1,20 +1,47 @@
 export const characterDetailGenerator = (array) => {
   array.forEach((e) => {
     e.addEventListener("click", () => {
-      /*Comprobar si funciona el evento */
-      console.log("Este elemento tiene la id: ", e.dataset.id);
+      document.body.style.overflow = "hidden";
 
-      // Almacenamos el id en una variable.
+      document.querySelector("#ppal_header").style.zIndex = -1;
+
+      array.forEach((card) => {
+        card.style.zIndex = -5;
+      });
+
+      document
+        .querySelectorAll(".rarity_divider, .class_divider")
+        .forEach((divider) => {
+          divider.style.zIndex = -5;
+        });
+
       const id = e.dataset.id;
-
-      // Cambiamos el display de la tarjeta de detalles de ese personaje.
       const detailCard = document.querySelector(
         `.detailed_card_overlay[data-id="${id}"]`
       );
-
-      /* Cambiar le display de "detailed_card_overlay" de ese mismo
-      elemento para comprobar los parámetros */
       detailCard.style.display = "flex";
+
+      const closeBtn = detailCard.querySelector(".close_btn");
+
+      if (closeBtn) {
+        closeBtn.addEventListener("click", () => {
+          detailCard.style.display = "none";
+
+          document.body.style.overflow = "auto";
+
+          document.querySelector("#ppal_header").style.zIndex = 5;
+
+          array.forEach((card) => {
+            card.style.zIndex = 0;
+          });
+
+          document
+            .querySelectorAll(".rarity_divider, .class_divider")
+            .forEach((divider) => {
+              divider.style.zIndex = 0;
+            });
+        });
+      }
     });
   });
 };
