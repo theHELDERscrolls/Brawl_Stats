@@ -13,14 +13,6 @@
   inherits: false;
 }
 
-:root {
-  --color-legendary: #fff11e;
-  --color-mythic: #fe5e72;
-  --color-epic: #d850ff;
-  --color-superrare: #5ab3ff;
-  --color-rare: #68fd58;
-}
-
 .character_card {
   align-items: center;
   background: var(--color-background);
@@ -42,7 +34,6 @@
 
 .character_description {
   color: var(--color-text);
-  letter-spacing: 1px;
   padding: 1em;
   flex-grow: 1;
   background: var(--color-background);
@@ -102,18 +93,18 @@
 }
 
 /* Dynamic border */
-.legendary::after,
-.legendary::before,
-.mythic::after,
-.mythic::before,
-.epic::after,
-.epic::before,
-.superrare::after,
-.superrare::before,
-.rare::after,
-.rare::before,
-.common::after,
-.common::before {
+.character_card.legendary::after,
+.character_card.legendary::before,
+.character_card.mythic::after,
+.character_card.mythic::before,
+.character_card.epic::after,
+.character_card.epic::before,
+.character_card.superrare::after,
+.character_card.superrare::before,
+.character_card.rare::after,
+.character_card.rare::before,
+.character_card.common::after,
+.character_card.common::before {
   background-image: conic-gradient(
     from var(--angle),
     transparent 50%,
@@ -135,22 +126,8 @@
   transition: all 0.3s ease-in-out;
 }
 
-/* .legendary::after,
-.legendary::before,
-.mythic::after,
-.mythic::before,
-.epic::after,
-.epic::before,
-.superrare::after,
-.superrare::before,
-.rare::after,
-.rare::before,
-.common::after,
-.common::before {
-} */
-
-.mythic::after,
-.mythic::before {
+.character_card.mythic::after,
+.character_card.mythic::before {
   background-image: conic-gradient(
     from var(--angle),
     transparent 50%,
@@ -158,8 +135,8 @@
   );
 }
 
-.epic::after,
-.epic::before {
+.character_card.epic::after,
+.character_card.epic::before {
   background-image: conic-gradient(
     from var(--angle),
     transparent 50%,
@@ -167,8 +144,8 @@
   );
 }
 
-.superrare::after,
-.superrare::before {
+.character_card.superrare::after,
+.character_card.superrare::before {
   background-image: conic-gradient(
     from var(--angle),
     transparent 50%,
@@ -176,10 +153,10 @@
   );
 }
 
-.rare::after,
-.rare::before,
-.common::after,
-.common::before {
+.character_card.rare::after,
+.character_card.rare::before,
+.character_card.common::after,
+.character_card.common::before {
   background-image: conic-gradient(
     from var(--angle),
     transparent 50%,
@@ -192,18 +169,18 @@
   opacity: 0;
 }
 
-.legendary:hover::before,
-.legendary:hover::after,
-.mythic:hover::before,
-.mythic:hover::after,
-.epic:hover::before,
-.epic:hover::after,
-.superrare:hover::before,
-.superrare:hover::after,
-.rare:hover::before,
-.rare:hover::after,
-.common:hover::before,
-.common:hover::after {
+.character_card.legendary:hover::before,
+.character_card.legendary:hover::after,
+.character_card.mythic:hover::before,
+.character_card.mythic:hover::after,
+.character_card.epic:hover::before,
+.character_card.epic:hover::after,
+.character_card.superrare:hover::before,
+.character_card.superrare:hover::after,
+.character_card.rare:hover::before,
+.character_card.rare:hover::after,
+.character_card.common:hover::before,
+.character_card.common:hover::after {
   opacity: 1;
 }
 

@@ -9,6 +9,12 @@
   --color-text: #f7f7f7;
   --white-details: #ffffff;
   --color-section-background: #172554;
+
+  --color-legendary: #fff11e;
+  --color-mythic: #fe5e72;
+  --color-epic: #d850ff;
+  --color-superrare: #5ab3ff;
+  --color-rare: #68fd58;
 }
 
 * {

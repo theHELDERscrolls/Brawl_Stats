@@ -32,7 +32,7 @@ export const characterCard = (
   </div>
   
   <div class="detailed_card_overlay" data-id=${brawlerId} style="display: none;">
-    <div class="detailed_card">  
+    <div class="detailed_card ${rarityName}">  
       <img class="close_btn" src="/assets/icons/x.svg" alt="close button">
       <header class="header_detailed_card">
         <img class="emoji_img" src=${brawlerEmoji} alt=${name} emoji>

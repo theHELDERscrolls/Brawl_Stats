@@ -16,34 +16,81 @@
   height: 90vh;
   justify-content: center;
   left: 0;
+  padding: 2em;
   position: fixed;
   top: 10vh;
   width: 100%;
   z-index: 99;
+
+  animation: fadeIn 0.3s linear both;
 }
 
 .close_btn {
+  cursor: pointer;
   filter: invert(1);
   position: absolute;
-  right: 5px;
-  top: 5px;
+  right: 10px;
+  top: 10px;
 }
 
 .detailed_card {
   align-items: center;
-  background-color: var(--color-background);
   border-radius: 10px;
   border: 2px solid var(--white-details);
   color: var(--color-text);
   display: flex;
-  height: 80%;
   justify-content: center;
   padding: 1em;
   position: relative;
-  width: 70%;
+  height: auto;
+  max-width: 800px;
+
+  animation: scaleInOut 0.3s linear both reverse;
 }
 
-/*! CHARACTER MODEL AND NAME */
+/* Background color by rarity */
+.detailed_card.legendary {
+  background: linear-gradient(
+    135deg,
+    var(--color-legendary) 0%,
+    var(--color-background) 50%
+  );
+}
+
+.detailed_card.mythic {
+  background: linear-gradient(
+    135deg,
+    var(--color-mythic) 0%,
+    var(--color-background) 50%
+  );
+}
+
+.detailed_card.epic {
+  background: linear-gradient(
+    135deg,
+    var(--color-epic) 0%,
+    var(--color-background) 50%
+  );
+}
+
+.detailed_card.superrare {
+  background: linear-gradient(
+    135deg,
+    var(--color-superrare) 0%,
+    var(--color-background) 50%
+  );
+}
+
+.detailed_card.rare,
+.detailed_card.common {
+  background: linear-gradient(
+    135deg,
+    var(--color-rare) 0%,
+    var(--color-background) 50%
+  );
+}
+
+/*! CHARACTER MODEL, EMOJI AND NAME */
 .header_detailed_card {
   align-items: center;
   display: flex;
@@ -55,8 +102,13 @@
 }
 
 .header_detailed_card h2 {
-  color: var(--color-accent);
+  background: var(--white-details);
+  border-radius: 10px;
+  border: 2px solid var(--color-background);
+  box-shadow: 2px 2px 0px var(--color-background);
+  color: var(--color-background);
   font-size: 3em;
+  padding: 0px 10px;
 }
 
 .model_img {
@@ -65,6 +117,10 @@
   max-width: 300px;
   object-fit: contain;
   width: 100%;
+}
+
+.emoji_img {
+  display: none;
 }
 
 /*! POWER INFO */
@@ -81,7 +137,6 @@
 .power_name {
   align-items: center;
   border-radius: 10px;
-  box-shadow: inset -3px -3px 6px #2a2a2a, inset 3px 3px 6px rgba(0, 0, 0, 0.8);
   display: flex;
   font-size: 1.5em;
   justify-items: center;
@@ -91,12 +146,13 @@
 .power_icons {
   align-items: center;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   max-width: 350px;
   min-width: 275px;
 }
 
 .ability-icon {
+  background: var(--color-background);
   border-radius: 10px;
   border: 2px solid var(--white-details);
   box-shadow: 2px 2px 0px var(--white-details);
@@ -134,40 +190,83 @@
   animation: neon 1s linear infinite alternate;
 }
 
-@media (max-width: 832px) {
+@media (max-width: 685px) {
+  .detailed_card_overlay {
+    padding: 1em;
+  }
+
   .detailed_card {
     flex-direction: column;
-    height: 90%;
-    width: 90%;
   }
+
+  /* Background color by rarity */
+  .detailed_card.legendary {
+    background: linear-gradient(
+      180deg,
+      var(--color-legendary) 0%,
+      var(--color-background) 50%
+    );
+  }
+
+  .detailed_card.mythic {
+    background: linear-gradient(
+      180deg,
+      var(--color-mythic) 0%,
+      var(--color-background) 50%
+    );
+  }
+
+  .detailed_card.epic {
+    background: linear-gradient(
+      180deg,
+      var(--color-epic) 0%,
+      var(--color-background) 50%
+    );
+  }
+
+  .detailed_card.superrare {
+    background: linear-gradient(
+      180deg,
+      var(--color-superrare) 0%,
+      var(--color-background) 50%
+    );
+  }
+
+  .detailed_card.rare,
+  .detailed_card.common {
+    background: linear-gradient(
+      180deg,
+      var(--color-rare) 0%,
+      var(--color-background) 50%
+    );
+  }
+
   .header_detailed_card {
-    gap: 1em;
+    flex-direction: row;
+  }
+
+  .header_detailed_card h2 {
+    font-size: 2em;
+  }
+
+  .emoji_img {
+    display: flex;
+    height: 50px;
+    width: auto;
+  }
+
+  .model_img {
+    display: none;
   }
 
   .section_detailed_card {
     gap: 1em;
-  }
-}
-
-@media (max-height: 800px) {
-  .model_img {
-    max-height: 200px;
-    max-width: 200px;
-  }
-}
-
-@media (max-height: 376px) {
-  .model_img {
-    max-height: 100px;
-    max-width: 100px;
+    padding: 1em;
   }
 }
 
 @media (max-width: 375px) {
   .detailed_card {
-    flex-direction: column;
-    height: 98%;
-    padding: 10px;
-    width: 98%;
+    width: 300px;
   }
 }
