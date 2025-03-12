@@ -5,15 +5,15 @@ export const characterDetailGenerator = (array) => {
 
       document.querySelector("#ppal_header").style.zIndex = -1;
 
-      array.forEach((card) => {
-        card.style.zIndex = -5;
-      });
-
       document
         .querySelectorAll(".rarity_divider, .class_divider")
         .forEach((divider) => {
-          divider.style.zIndex = -5;
+          divider.style.zIndex = -2;
         });
+
+      document.querySelectorAll(".article_container").forEach((article) => {
+        article.style.zIndex = -5;
+      });
 
       const id = e.dataset.id;
       const detailCard = document.querySelector(
@@ -31,15 +31,15 @@ export const characterDetailGenerator = (array) => {
 
           document.querySelector("#ppal_header").style.zIndex = 5;
 
-          array.forEach((card) => {
-            card.style.zIndex = 0;
-          });
-
           document
             .querySelectorAll(".rarity_divider, .class_divider")
             .forEach((divider) => {
               divider.style.zIndex = 0;
             });
+
+          document.querySelectorAll(".article_container").forEach((article) => {
+            article.style.zIndex = 0;
+          });
         });
       }
     });
