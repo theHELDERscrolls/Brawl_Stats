@@ -150,7 +150,7 @@
   min-width: 275px;
 }
 
-.ability-icon {
+.ability_icon {
   background: var(--color-background);
   border-radius: 10px;
   border: 2px solid var(--white-details);
@@ -163,11 +163,11 @@
   transition: all 0.2s ease-in-out;
 }
 
-.ability-icon:hover {
+.ability_icon:hover {
   background-color: #242424;
 }
 
-.ability-icon:active {
+.ability_icon:active {
   box-shadow: 0px 0px 0px;
   transform: translate(2px, 2px);
 }

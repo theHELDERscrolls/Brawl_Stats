@@ -44,22 +44,22 @@ export const characterCard = (
         <div class="power_icons">
           ${
             firstStarPowerName
-              ? `<img src="${firstStarPowerImg}" alt="${firstStarPowerName}" class="ability-icon" data-name="${firstStarPowerName}" data-desc="${firstStarPowerDesc}">`
+              ? `<img src="${firstStarPowerImg}" alt="${firstStarPowerName}" class="ability_icon" data-name="${firstStarPowerName}" data-desc="${firstStarPowerDesc}">`
               : ""
           }
           ${
             secondStarPowerName
-              ? `<img src="${secondStarPowerImg}" alt="${secondStarPowerName}" class="ability-icon" data-name="${secondStarPowerName}" data-desc="${secondStarPowerDesc}">`
+              ? `<img src="${secondStarPowerImg}" alt="${secondStarPowerName}" class="ability_icon" data-name="${secondStarPowerName}" data-desc="${secondStarPowerDesc}">`
               : ""
           }
           ${
             firstGadgetName
-              ? `<img src="${firstGadgetImg}" alt="${firstGadgetName}" class="ability-icon" data-name="${firstGadgetName}" data-desc="${firstGadgetDesc}">`
+              ? `<img src="${firstGadgetImg}" alt="${firstGadgetName}" class="ability_icon" data-name="${firstGadgetName}" data-desc="${firstGadgetDesc}">`
               : ""
           }
           ${
             secondGadgetName
-              ? `<img src="${secondGadgetImg}" alt="${secondGadgetName}" class="ability-icon" data-name="${secondGadgetName}" data-desc="${secondGadgetDesc}">`
+              ? `<img src="${secondGadgetImg}" alt="${secondGadgetName}" class="ability_icon" data-name="${secondGadgetName}" data-desc="${secondGadgetDesc}">`
               : ""
           }
         </div>

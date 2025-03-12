@@ -1,6 +1,19 @@
+import { changePowerBtn } from "./changePowerBtn";
+
 export const characterDetailGenerator = (array) => {
   array.forEach((e) => {
     e.addEventListener("click", () => {
+      // Get id
+      const id = e.dataset.id;
+      const detailCard = document.querySelector(
+        `.detailed_card_overlay[data-id="${id}"]`
+      );
+
+      detailCard.style.display = "flex";
+
+      //Power and gadgets buttons
+      changePowerBtn(detailCard);
+
       document.body.style.overflow = "hidden";
 
       document.querySelector("#ppal_header").style.zIndex = 0;
@@ -10,12 +23,6 @@ export const characterDetailGenerator = (array) => {
         .forEach((divider) => {
           divider.style.zIndex = -2;
         });
-
-      const id = e.dataset.id;
-      const detailCard = document.querySelector(
-        `.detailed_card_overlay[data-id="${id}"]`
-      );
-      detailCard.style.display = "flex";
 
       const parentArticle = detailCard.closest(".article_container");
       document.querySelectorAll(".article_container").forEach((article) => {
