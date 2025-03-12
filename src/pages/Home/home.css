@@ -29,7 +29,7 @@
 }
 
 #hero h2,
-h3 {
+#hero h3 {
   font-weight: 100;
   padding: 0 1em;
   text-align: center;
@@ -61,6 +61,12 @@ h3 {
   animation: scaleInOut linear both;
   animation-timeline: view();
   animation-range: exit -20vh exit 0vh;
+}
+
+#hero h2,
+#hero h3,
+#navbar_social {
+  animation: fadeIn 1s linear both;
 }
 
 @media (max-width: 1000px) {
