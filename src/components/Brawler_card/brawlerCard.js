@@ -7,6 +7,7 @@ export const characterCard = (
   description,
   rarityName,
   brawlerId,
+  brawlerEmoji,
   model,
   firstStarPowerName,
   firstStarPowerImg,
@@ -34,6 +35,7 @@ export const characterCard = (
     <div class="detailed_card">  
       <img class="close_btn" src="/assets/icons/x.svg" alt="close button">
       <header class="header_detailed_card">
+        <img class="emoji_img" src=${brawlerEmoji} alt=${name} emoji>
         <h2>${name}</h2>
         <img class="model_img" src="${model}" alt="${name} model">
       </header>
