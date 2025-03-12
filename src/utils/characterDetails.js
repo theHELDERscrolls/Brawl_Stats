@@ -3,7 +3,7 @@ export const characterDetailGenerator = (array) => {
     e.addEventListener("click", () => {
       document.body.style.overflow = "hidden";
 
-      document.querySelector("#ppal_header").style.zIndex = -1;
+      document.querySelector("#ppal_header").style.zIndex = 0;
 
       document
         .querySelectorAll(".rarity_divider, .class_divider")
@@ -11,15 +11,18 @@ export const characterDetailGenerator = (array) => {
           divider.style.zIndex = -2;
         });
 
-      document.querySelectorAll(".article_container").forEach((article) => {
-        article.style.zIndex = -5;
-      });
-
       const id = e.dataset.id;
       const detailCard = document.querySelector(
         `.detailed_card_overlay[data-id="${id}"]`
       );
       detailCard.style.display = "flex";
+
+      const parentArticle = detailCard.closest(".article_container");
+      document.querySelectorAll(".article_container").forEach((article) => {
+        if (article !== parentArticle) {
+          article.style.zIndex = -5;
+        }
+      });
 
       const closeBtn = detailCard.querySelector(".close_btn");
 
