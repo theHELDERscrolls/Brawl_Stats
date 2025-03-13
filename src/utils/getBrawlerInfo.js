@@ -43,4 +43,4 @@ export const fetchBrawlersInfo = async () => {
   }
 };
 
-fetchBrawlersInfo().then((data) => console.log(data));
+//fetchBrawlersInfo().then((data) => console.log(data));
