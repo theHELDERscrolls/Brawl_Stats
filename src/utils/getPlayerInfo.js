@@ -1,6 +1,6 @@
 export const getPlayerInfo = async (playerTag) => {
   // Almacenamos la apiKey
-  const apiKey = import.meta.env.VITE_API_KEY;
+  const apiKey = import.meta.env.VITE_BRAWL_API_KEY;
   console.log(apiKey);
   
 
