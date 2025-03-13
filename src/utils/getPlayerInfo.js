@@ -1,8 +1,6 @@
 export const getPlayerInfo = async (playerTag) => {
   // Almacenamos la apiKey
   const apiKey = import.meta.env.VITE_BRAWL_API_KEY;
-  console.log(apiKey);
-  
 
   // URL a la que queremos hacer el fetch
   const url = `https://api.brawlstars.com/v1/players/${encodeURIComponent(
