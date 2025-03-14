@@ -24,6 +24,9 @@ export const characterDetailGenerator = (array) => {
           divider.style.zIndex = -2;
         });
 
+      /* Para solucionar los problemas del index de los artículos, necesitamos
+      cambiar el de todos los demás articles MENOS EL DEL ARTICLE EN EL QUE ESTAMOS
+      (para que a detail card no se vaya al fondo, si no queda todo igual). */
       const parentArticle = detailCard.closest(".article_container");
       document.querySelectorAll(".article_container").forEach((article) => {
         if (article !== parentArticle) {

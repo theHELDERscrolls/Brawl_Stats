@@ -12,7 +12,7 @@ export const navbarWeb = () => {
             ${anchorDefault("brawlers_link", "#brawlers", "Brawlers")}
         </li>
         <li>
-            ${anchorDefault("players_link", "#players", "Players")}
+            ${anchorDefault("maps_link", "#maps", "Maps")}
         </li>
       </ul>
     </nav>`;
