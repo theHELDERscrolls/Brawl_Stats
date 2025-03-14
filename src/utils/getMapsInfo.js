@@ -7,7 +7,7 @@ export const fetchMapsInfo = async () => {
       id: map.id,
       name: map.name,
       image: map.imageUrl,
-      isDisableb: map.disabled,
+      isDisabled: map.disabled,
 
       // Game Mode (necessary to classify).
       scIdGameMode: map.gameMode.scId,
@@ -21,6 +21,6 @@ export const fetchMapsInfo = async () => {
   }
 };
 
-fetchMapsInfo().then((data) => {
-  console.log(data);
-});
+// fetchMapsInfo().then((data) => {
+//   console.log(data);
+// });
