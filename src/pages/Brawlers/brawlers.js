@@ -22,14 +22,12 @@ import { pageCleaner } from "../../utils/cleanPage.js";
 
 import "./brawlers.css";
 
-let brawlerData = [];
+let brawlerData = []; // Variable que almacena la información con la que vamos a trabajar.
 
 export const Brawlers = async () => {
   const main = document.querySelector("main");
   pageCleaner(main);
   brawlerData = await fetchBrawlersInfo();
-
-  console.log(brawlerData);
 
   main.innerHTML = `
     ${clickFilter()}
