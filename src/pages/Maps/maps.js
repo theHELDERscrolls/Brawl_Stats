@@ -2,6 +2,7 @@ import { createMap } from "../../components/Map_title/mapTitle";
 import { createImageTitle } from "../../components/Titles/titles";
 import { pageCleaner } from "../../utils/cleanPage";
 import { fetchMapsInfo } from "../../utils/getMapsInfo";
+import { Stats } from "../Stats/stats";
 import "./maps.css";
 
 export const Maps = async () => {
@@ -10,8 +11,6 @@ export const Maps = async () => {
 
   let enabledMaps = [];
   enabledMaps = await fetchMapsInfo();
-
-  //todo => console.log(enabledMaps);
 
   /* Debemos de clasificar los mapas por modos de juego. Para ello vamos
   a usar le método reduce(). */
@@ -26,8 +25,6 @@ export const Maps = async () => {
 
     return acc;
   }, {});
-
-  //todo=> console.log(enabledMaps);
 
   /* Objetct.entries() => Lo usamos para recorrer objetos, tanto sus claves (keys)
   como sus valores (values), devolviendo un array de arrays donde cada elemento es
@@ -73,19 +70,14 @@ export const Maps = async () => {
     // Obtenemos cada mapa y lo añadimos a su section correspondiente.
     const mapsContainer = document.createElement("div");
     mapsContainer.classList.add("maps_container");
+
     maps.forEach((map) => {
       const mapElement = createMap(map.id, map.name, map.image);
-
-      // const mapElement = document.createElement("div");
-      // mapElement.setAttribute("data-idMap", map.id); // Para luego recuperar info con dataset.
-      // mapElement.classList.add("map");
-      // mapElement.innerHTML = `
-      // <h3>${map.name}</h3>
-      // <img src="${map.image}" alt="${map.name} image">`;
+      mapsContainer.appendChild(mapElement);
 
       //! ACUÍ añadimos un eventListener que tenga la función de sacar las estadísticas de cada map
       // Recurda que tenemos que rescatar el dataset.idMap (data-idmap) y pasarlo al fetch
-      mapsContainer.appendChild(mapElement);
+      //todo=> mapElement.addEventListener("click", Stats(map.id));
     });
 
     // Lo añadimos al main.
