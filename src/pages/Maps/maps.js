@@ -1,3 +1,4 @@
+import { createMap } from "../../components/Map_title/mapTitle";
 import { createImageTitle } from "../../components/Titles/titles";
 import { pageCleaner } from "../../utils/cleanPage";
 import { fetchMapsInfo } from "../../utils/getMapsInfo";
@@ -26,7 +27,7 @@ export const Maps = async () => {
     return acc;
   }, {});
 
-  console.log(enabledMaps);
+  //todo=> console.log(enabledMaps);
 
   /* Objetct.entries() => Lo usamos para recorrer objetos, tanto sus claves (keys)
   como sus valores (values), devolviendo un array de arrays donde cada elemento es
@@ -73,18 +74,30 @@ export const Maps = async () => {
     const mapsContainer = document.createElement("div");
     mapsContainer.classList.add("maps_container");
     maps.forEach((map) => {
-      const mapElement = document.createElement("div");
-      mapElement.setAttribute("data-idMap", map.id); // Para luego recuperar info con dataset.
-      mapElement.classList.add("map");
-      mapElement.innerHTML = `
-      <h3>${map.name}</h3>
-      <img src="${map.image}" alt="${map.name} image">`;
+      const mapElement = createMap(map.id, map.name, map.image);
 
+      // const mapElement = document.createElement("div");
+      // mapElement.setAttribute("data-idMap", map.id); // Para luego recuperar info con dataset.
+      // mapElement.classList.add("map");
+      // mapElement.innerHTML = `
+      // <h3>${map.name}</h3>
+      // <img src="${map.image}" alt="${map.name} image">`;
+
+      //! ACUÍ añadimos un eventListener que tenga la función de sacar las estadísticas de cada map
+      // Recurda que tenemos que rescatar el dataset.idMap (data-idmap) y pasarlo al fetch
       mapsContainer.appendChild(mapElement);
     });
 
     // Lo añadimos al main.
     section.appendChild(mapsContainer);
     main.appendChild(section);
+
+    /* Listeners para los mapas > borrar la web y pintar la del contenido de los datos de ese mapa >
+    > poner un botón para volver a pintar la web anterior (dejarla a la misma altura que estaba?) */
+
+    //! OJO ar dato bro:
+    /* Podemos crear una función por cada mapa que se encargue de ello y añadirla al forEach anterior:
+      - Borra la pesataña actual y pinta la siguiente > contendrá los datos de ese mapa y un botón
+        para retornar a maps. */
   });
 };

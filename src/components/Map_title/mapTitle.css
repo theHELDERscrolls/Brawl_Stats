@@ -1,0 +1,30 @@
+.map {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  justify-content: center;
+  padding: 1em;
+
+  animation: scaleInOut linear both reverse;
+  animation-timeline: view();
+  animation-range: entry 10% cover 25%;
+}
+
+.map h3 {
+  background: var(--white-details);
+  border-radius: 10px;
+  border: 2px solid var(--color-background);
+  box-shadow: 2px 2px 0px var(--color-background);
+  padding: 5px 10px;
+}
+
+.map img {
+  border-radius: 35px;
+  height: auto;
+  width: 200px;
+}
+
+.map img:hover {
+  cursor: pointer;
+}
