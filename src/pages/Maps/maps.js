@@ -76,20 +76,14 @@ export const Maps = async () => {
       mapsContainer.appendChild(mapElement);
 
       //! ACUÍ añadimos un eventListener que tenga la función de sacar las estadísticas de cada map
-      // Recurda que tenemos que rescatar el dataset.idMap (data-idmap) y pasarlo al fetch
-      //todo=> mapElement.addEventListener("click", Stats(map.id));
+      // Recuerda que tenemos que rescatar el dataset.idMap (data-idmap) y pasarlo al fetch
+      mapElement.addEventListener("click", () => {
+        Stats(map.id);
+      });
     });
 
     // Lo añadimos al main.
     section.appendChild(mapsContainer);
     main.appendChild(section);
-
-    /* Listeners para los mapas > borrar la web y pintar la del contenido de los datos de ese mapa >
-    > poner un botón para volver a pintar la web anterior (dejarla a la misma altura que estaba?) */
-
-    //! OJO ar dato bro:
-    /* Podemos crear una función por cada mapa que se encargue de ello y añadirla al forEach anterior:
-      - Borra la pesataña actual y pinta la siguiente > contendrá los datos de ese mapa y un botón
-        para retornar a maps. */
   });
 };

@@ -3,7 +3,11 @@ export const fetchStatsInfo = async (mapId) => {
     const res = await fetch(`https://api.brawlify.com/v1/maps/${mapId}`);
     const data = await res.json();
 
-    return data.stats;
+    return {
+      name: data.name,
+      image: data.imageUrl,
+      stats: data.stats,
+    };
   } catch (error) {
     console.error("Error fetching Stats:", error);
     alert("An error occurred while fetching the data. Please try again later.");
