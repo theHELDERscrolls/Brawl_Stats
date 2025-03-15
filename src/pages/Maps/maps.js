@@ -58,14 +58,20 @@ export const Maps = async () => {
 
     // Rescatamos el primer elemento del array para el título y el icono.
     const gameModeTitle = maps[0].nameGameMode;
+    const gameModeBg = maps[0].bgColorGameMode;
     const iconGameMode = `https://cdn.brawlify.com/game-modes/regular/${maps[0].scIdGameMode}.png`;
 
     // Creamos el elemento haciendo uso del componente.
-    const titleSection = createImageTitle(gameModeTitle, iconGameMode);
+    const titleSection = createImageTitle(
+      gameModeTitle,
+      gameModeBg,
+      iconGameMode
+    );
     section.innerHTML = titleSection;
 
     // Obtenemos cada mapa y lo añadimos a su section correspondiente.
     const mapsContainer = document.createElement("div");
+    mapsContainer.classList.add("maps_container");
     maps.forEach((map) => {
       const mapElement = document.createElement("div");
       mapElement.setAttribute("data-idMap", map.id); // Para luego recuperar info con dataset.

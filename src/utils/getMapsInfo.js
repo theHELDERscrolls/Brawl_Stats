@@ -13,6 +13,7 @@ export const fetchMapsInfo = async () => {
         // Game Mode (necessary to classify).
         scIdGameMode: map.gameMode.scId,
         nameGameMode: map.gameMode.name,
+        bgColorGameMode: map.gameMode.bgColor,
       }))
       .filter((map) => map.isDisabled === false);
   } catch (error) {

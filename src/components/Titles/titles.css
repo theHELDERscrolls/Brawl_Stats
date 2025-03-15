@@ -1,0 +1,22 @@
+.img_title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  position: sticky;
+  top: 10vh;
+  gap: 1em;
+  padding: 5px;
+  z-index: 1;
+}
+
+.img_title img {
+  width: 50px;
+  height: auto;
+}
+
+.img_title h2 {
+  color: var(--white-details);
+  filter: drop-shadow(-2px 3px 0px var(--color-background));
+}
