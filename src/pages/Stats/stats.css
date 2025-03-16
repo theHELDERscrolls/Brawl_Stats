@@ -1,0 +1,97 @@
+.explain {
+  color: var(--color-text);
+  font-size: 1.5em;
+  margin-top: 2em;
+}
+
+.explain span {
+  color: var(--color-accent);
+}
+
+.stats_table {
+  background-color: var(--color-background);
+  border-radius: 10px;
+  border: 2px solid var(--white-details);
+  color: var(--color-text);
+  margin: 2em;
+}
+
+.stats_headers,
+.brawler_row {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.stats_headers h4 {
+  color: var(--color-accent);
+  font-size: 1.1em;
+}
+
+.stats_headers h4,
+.brawler_row p {
+  padding: 1em;
+  width: 200px;
+}
+
+.brawler_row div {
+  width: 200px;
+}
+
+.brawler_row div {
+  align-items: center;
+  display: flex;
+  padding: 1em;
+}
+
+.brawler_frame {
+  height: 50px;
+  width: 50px;
+}
+
+.brawler_row .legendary img {
+  box-shadow: 0px 0px 5px var(--color-legendary);
+}
+
+.brawler_row .mythic img {
+  box-shadow: 0px 0px 5px var(--color-mythic);
+}
+
+.brawler_row .epic img {
+  box-shadow: 0px 0px 5px var(--color-epic);
+}
+
+.brawler_row .superrare img {
+  box-shadow: 0px 0px 5px var(--color-superrare);
+}
+
+.brawler_row .rare img,
+.brawler_row .common img {
+  box-shadow: 0px 0px 5px var(--color-rare);
+}
+
+.back_btn {
+  align-items: center;
+  background: var(--white-details);
+  border-radius: 10px;
+  border: 2px solid var(--color-background);
+  box-shadow: 2px 2px 0px var(--color-background);
+  display: flex;
+  font-size: 1.1em;
+  justify-content: center;
+  left: 5em;
+  padding: 5px 10px;
+  position: fixed;
+  top: 11vh;
+
+  transition: all 0.2s ease-in-out;
+}
+
+.back_btn:hover {
+  background-color: rgb(226, 226, 226);
+}
+
+.back_btn:active {
+  box-shadow: 0px 0px 0px var(--color-background);
+  transform: translate(2px, 2px);
+}

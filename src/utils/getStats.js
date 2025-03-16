@@ -4,6 +4,7 @@ export const fetchStatsInfo = async (mapId) => {
     const data = await res.json();
 
     return {
+      id: data.id,
       name: data.name,
       image: data.imageUrl,
       stats: data.stats,

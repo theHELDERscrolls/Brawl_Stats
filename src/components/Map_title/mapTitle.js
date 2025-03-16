@@ -1,4 +1,4 @@
-import "./mapTitle.css"
+import "./mapTitle.css";
 
 export const createMap = (id, name, image) => {
   const div = document.createElement("div");

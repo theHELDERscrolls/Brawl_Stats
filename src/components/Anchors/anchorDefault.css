@@ -1,5 +1,5 @@
 #suggest_btn {
-  background: var(--white-details);
+  background: var(--color-accent);
   border-radius: 10px;
   border: 2px solid var(--color-background);
   box-shadow: 2px 2px 0px var(--color-background);
@@ -10,10 +10,6 @@
   z-index: 1;
 
   transition: all 0.2s ease-in-out;
-}
-
-#suggest_btn:hover {
-  background: var(--color-accent);
 }
 
 #suggest_btn:active {

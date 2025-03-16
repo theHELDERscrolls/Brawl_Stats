@@ -1,7 +1,7 @@
-import { createMap } from "../../components/Map_title/mapTitle";
 import { createImageTitle } from "../../components/Titles/titles";
-import { pageCleaner } from "../../utils/cleanPage";
+import { createMap } from "../../components/Map_title/mapTitle";
 import { fetchMapsInfo } from "../../utils/getMapsInfo";
+import { pageCleaner } from "../../utils/cleanPage";
 import { Stats } from "../Stats/stats";
 import "./maps.css";
 
