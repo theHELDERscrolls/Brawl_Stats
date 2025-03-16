@@ -28,7 +28,7 @@ export const Home = () => {
     ${secTempB(
       "/assets/videos/maps_vid.mp4",
       "players_info",
-      "Check check all map stats",
+      "Check all map stats",
       "View active maps and check the win and use rates of each brawler per map. Analyze trends, find the best picks, and improve your strategy to gain an edge in every battle."
     )}`;
 };
