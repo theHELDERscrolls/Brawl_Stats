@@ -22,13 +22,13 @@ export const Home = () => {
       "brawlers_info",
       "Know all the brawlers",
       "Explore all available brawlers and discover their abilities, stats, and unique traits. Each profile includes a detailed description and a strategic guide to help you master their playstyle and make the most of their potential in battle.",
-      "/assets/videos/BS_Banner.mp4"
+      "/assets/videos/brawlers_vid.mp4"
     )}
     
     ${secTempB(
-      "/assets/videos/BS_Banner.mp4",
+      "/assets/videos/maps_vid.mp4",
       "players_info",
-      "Check your stats and compare",
-      "Check your stats by entering your player code and compare them with other users. Analyze your performance, victories, and improvements in each match to keep progressing and become a better brawler."
+      "Check check all map stats",
+      "View active maps and check the win and use rates of each brawler per map. Analyze trends, find the best picks, and improve your strategy to gain an edge in every battle."
     )}`;
 };
