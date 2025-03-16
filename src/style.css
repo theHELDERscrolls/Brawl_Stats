@@ -41,10 +41,3 @@ main {
   padding-top: 10vh;
   width: 100%;
 }
-
-footer {
-  background-color: var(--color-background);
-  min-height: 100px;
-  width: 100%;
-  z-index: 5;
-}

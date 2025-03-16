@@ -1,4 +1,3 @@
-import { pageCleaner } from "../../utils/cleanPage";
 import { anchorImage } from "../Anchors/anchorImage";
 import { logo } from "../Logo/logo";
 import "./footer.css";
@@ -23,6 +22,14 @@ export const Footer = () => {
           "https://github.com/theHELDERscrolls",
           "my_work_icon",
           "/assets/icons/brand-github.svg",
+          "linkedIn icon"
+        )}
+
+        ${anchorImage(
+          "my_work_anchor",
+          "mailto:manuhelderruiz@gmail.com?subject=Contact me",
+          "my_work_icon",
+          "/assets/icons/mail.svg",
           "linkedIn icon"
         )}
     </div>
