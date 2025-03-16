@@ -1,3 +1,4 @@
+import { anchorImage } from "../Anchors/anchorImage";
 import "./brawlerCard.css";
 import "./brawlerDetailsCard.css";
 
@@ -29,6 +30,15 @@ export const characterCard = (
         <p>${name}</p>
     </div>
     <p class="character_description">${description}</p>
+    ${anchorImage(
+      "yt_guide",
+      `https://www.youtube.com/results?search_query=${encodeURIComponent(
+        name + " Brawl Stars guide"
+      )}`,
+      "yt_icon_guide",
+      "/assets/icons/brand-youtube.svg",
+      "Youtube icon"
+    )}
   </div>
   
   <div class="detailed_card_overlay" data-id=${brawlerId} style="display: none;">
