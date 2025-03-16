@@ -29,5 +29,6 @@
 
 .map img:hover {
   cursor: pointer;
-  filter: drop-shadow(0px 0px 5px var(--white-details));
+  transform: translate(-3px, -3px);
+  filter: drop-shadow(5px 5px 5px var(--color-background));
 }
