@@ -5,6 +5,7 @@ import { header } from "./components/Header/header";
 import { Home } from "./pages/Home/home";
 import { linkPage } from "./utils/linkPage";
 import { Maps } from "./pages/Maps/maps";
+import { Footer } from "./components/Footer/footer";
 
 const init = () => {
   header();
@@ -12,6 +13,7 @@ const init = () => {
   linkPage("home_link", Home);
   linkPage("brawlers_link", Brawlers);
   linkPage("maps_link", Maps);
+  Footer();
 };
 
 init();
