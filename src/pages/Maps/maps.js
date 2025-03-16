@@ -8,6 +8,7 @@ import "./maps.css";
 export const Maps = async () => {
   const main = document.querySelector("main");
   pageCleaner(main);
+  window.scrollTo(0, 0);
 
   let enabledMaps = [];
   enabledMaps = await fetchMapsInfo();

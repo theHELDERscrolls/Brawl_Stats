@@ -1,7 +1,8 @@
 .explain {
   color: var(--color-text);
   font-size: 1.5em;
-  margin-top: 2em;
+  text-align: center;
+  padding: 2em;
 }
 
 .explain span {
@@ -79,12 +80,17 @@
   display: flex;
   font-size: 1.1em;
   justify-content: center;
-  left: 5em;
+  right: 2em;
   padding: 5px 10px;
   position: fixed;
   top: 11vh;
+  z-index: 2;
 
   transition: all 0.2s ease-in-out;
+
+  animation: fadeIn linear both;
+  animation-timeline: scroll();
+  animation-range: 0 200px;
 }
 
 .back_btn:hover {
@@ -94,4 +100,36 @@
 .back_btn:active {
   box-shadow: 0px 0px 0px var(--color-background);
   transform: translate(2px, 2px);
+}
+
+@media (max-width: 865px) {
+  .stats_headers h4,
+  .brawler_row div,
+  .brawler_row p {
+    width: 150px;
+  }
+}
+
+@media (max-width: 715px) {
+  .explain {
+    padding: 1em;
+  }
+
+  .stats_headers h4,
+  .brawler_row div,
+  .brawler_row p {
+    width: 100px;
+  }
+}
+
+@media (max-width: 560px) {
+  .back_btn p {
+    display: none;
+  }
+}
+
+@media (max-width: 475px) {
+  .back_btn {
+    right: 5px;
+  }
 }
